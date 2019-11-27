@@ -32,11 +32,11 @@ class ArtworkControllerTest extends TestCase
     }
 
     /** @test */
-    public function artwork_on_index_page_are_order_by_most_recent()
+    public function artwork_on_index_page_are_order_by_order_column()
     {
-        $artwork_a = factory(Artwork::class)->create(['is_visible' => true, 'created_at' => now()->subDay()]);
-        $artwork_b = factory(Artwork::class)->create(['is_visible' => true, 'created_at' => now()]);
-        $artwork_c = factory(Artwork::class)->create(['is_visible' => true, 'created_at' => now()->subDays(2)]);
+        $artwork_a = factory(Artwork::class)->create(['is_visible' => true, 'order' => 2]);
+        $artwork_b = factory(Artwork::class)->create(['is_visible' => true, 'order' => 3]);
+        $artwork_c = factory(Artwork::class)->create(['is_visible' => true, 'order' => 1]);
 
         $response = $this->get(route('artwork.index'));
 

@@ -48,11 +48,11 @@ class DesignsControllerTest extends TestCase
     }
 
     /** @test */
-    public function design_on_index_page_are_order_by_most_recent()
+    public function design_on_index_page_are_order_by_order_column()
     {
-        $design_a = factory(Design::class)->create(['is_visible' => true, 'created_at' => now()->subDay()]);
-        $design_b = factory(Design::class)->create(['is_visible' => true, 'created_at' => now()]);
-        $design_c = factory(Design::class)->create(['is_visible' => true, 'created_at' => now()->subDays(2)]);
+        $design_a = factory(Design::class)->create(['is_visible' => true, 'order' => 2]);
+        $design_b = factory(Design::class)->create(['is_visible' => true, 'order' => 3]);
+        $design_c = factory(Design::class)->create(['is_visible' => true, 'order' => 1]);
 
         $response = $this->get(route('designs.index'));
 

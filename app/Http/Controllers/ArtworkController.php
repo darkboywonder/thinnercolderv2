@@ -9,7 +9,7 @@ class ArtworkController extends Controller
     public function index()
     {
         return view('artwork.index')->with([
-            'artwork' => Artwork::latest()->visible()->get(),
+            'artwork' => Artwork::visible()->orderBy('order', 'desc')->get(),
         ]);
     }
 

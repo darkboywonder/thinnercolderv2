@@ -9,7 +9,7 @@ class DesignsController extends Controller
     public function index()
     {
         return view('designs.index')->with([
-            'designs' => Design::visible()->latest()->get(),
+            'designs' => Design::visible()->orderBy('order', 'desc')->get(),
         ]);
     }
 
