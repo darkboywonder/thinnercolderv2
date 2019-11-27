@@ -21,6 +21,26 @@
                 </v-list-item-content>
             </div>
         </v-list-item>
+
+        <div class="flex justify-center item-center">
+            <button class="focus:outline-none w-full" type="submit" form="paypalcart">
+                <v-list-item
+                    class="flex justify-center item-center"
+                    color="#000000"
+                    link
+                >
+                    <div class="inline-flex w-24">
+                        <v-list-item-icon>
+                            <v-icon color="#000000" small>fa-shopping-cart</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-list-item-title>Shopping</v-list-item-title>
+                        </v-list-item-content>
+                    </div>
+                </v-list-item>
+            </button>
+        </div>
     </v-list>
 </template>
 

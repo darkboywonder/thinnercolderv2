@@ -12,6 +12,8 @@
     </head>
 
     <body class="bg-gray-500">
+        @include('partials.paypal-cart-form')
+
         <div id="app">
             <div class="relative block lg:hidden bg-white h-12 shadow-lg z-10">
                 <section class="flex justify-around items-center h-12">
@@ -36,15 +38,18 @@
                     <navigation-links></navigation-links>
                 </div>
             </div>
+
             <div class="flex z-0 justify-end">
-
-
                 <div class="sm:w-full lg:w-5/6 h-full bg-gray-500 z-0">
                     @yield('content')
                 </div>
             </div>
         </div>
 
-        <script src="{{ url('js/app.js') }}"></script>
+        @section('scripts')
+            <script src="{{ url('js/app.js') }}"></script>
+            @include('partials.google-analytics')
+        @show
+
     </body>
 </html>

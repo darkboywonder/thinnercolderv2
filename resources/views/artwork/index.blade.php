@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('action')
-    <div><i class="fas fa-shopping-cart text-lg"></i></div>
+    <button class="focus:outline-none" type="submit" form="paypalcart">
+        <i class="fas fa-shopping-cart text-lg"></i>
+    </button>
 @endsection
 
 @section('content')
