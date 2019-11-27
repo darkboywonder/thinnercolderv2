@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 
+use App\Nova\Actions\DisplayItems;
+use App\Nova\Actions\HideItems;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Davidpiesse\NovaToggle\Toggle;
@@ -123,6 +125,9 @@ class Design extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new HideItems,
+            new DisplayItems,
+        ];
     }
 }

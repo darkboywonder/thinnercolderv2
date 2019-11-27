@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Artwork extends Model
 {
     protected $table = 'artwork';
+    protected $guarded = [];
     protected $casts = [
         'is_sellable' => 'boolean',
     ];
