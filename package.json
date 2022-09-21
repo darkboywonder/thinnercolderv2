@@ -23,7 +23,7 @@
         "sass-loader": "7.*",
         "vue": "^2.6.10",
         "vue-template-compiler": "^2.6.10",
-        "vuetify": "^2.1.12"
+        "vuetify": "^2.6.10"
     },
     "dependencies": {
         "tailwindcss": "^1.1.4",
